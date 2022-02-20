@@ -19,7 +19,7 @@ function funPress(event){
 
 }else if (event.srcElement.id === '↢'){
     displayValue = displayValue.toString();
-    displayValue.slice(0,(displayValue.length -1 ));
+    displayValue = displayValue.slice(0,(displayValue.length -1 ));
     console.log('new' +displayValue);
     displayValue = parseFloat(displayValue);
 
@@ -81,11 +81,11 @@ function subtract(a,b){
 }
 
 function multiply(a,b){
-    return a * B
+    return a * b
 }
 function divide(a,b){
     if (b ===0) {
-        return "The universe disapproves"
+        return "The universe disapproves ‎ "
     }lelse
     return a / b
     
@@ -96,17 +96,19 @@ function operate(o,a,b){
     a = parseFloat(storedValue)
     b = parseFloat(displayValue)
 
-    if (o = '+'){ 
+    if (o === '+'){ 
         return  add(a,b);
 
-    }else if(o = '-'){
+    }else if(o === '-'){
 
         return  subtract(a,b);
-    }else if(o = '÷'){
+
+    }else if(o === '÷'){
         
         return  divide(a,b);
 
-    }else if(o = 'x'){
+    }else if(o === 'x'){
+
       return multiply(a,b);
     } 
 
